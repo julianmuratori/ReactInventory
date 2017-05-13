@@ -5,6 +5,8 @@ import Welcome from './Components/Welcome';
 import Supplier from './Components/Supplier';
 import Inventory from './Components/Inventory';
 import NotFound from './Components/NotFound';
+import Login from './Components/Login';
+import base from './base';
 
 class App extends React.Component {
 	constructor() {
@@ -29,6 +31,10 @@ class App extends React.Component {
 			order: {}
 		};
 	}
+
+	// componentWillMount() {
+	// 	this.ref = base.syncState
+	// }
 
 
 	// updates state
@@ -78,13 +84,25 @@ class App extends React.Component {
 
 	render() {
 		return (
-		<Supplier storeName="eat shit"
+		<Supplier storeName="buddy, please"
 			addItem={this.addItem}
 			removeItem={this.removeItem}
 			inventoryItems={this.state.inventoryItems}
 			addOne = {this.addOne}
 			removeOne = {this.removeOne}
 		/>
+		// <div className="mainSplash">
+		// 	<div className="splashOptions">
+		// 		<h1>Welcome to YourOrder!</h1>
+		// 		<h3>Choose an option to get started</h3>
+		//
+		// 		<div className="splashButton">
+		// 			{/* <a href="/Supplier">Supplier</a> */}
+		// 			<Link to="/Supplier">Supplier</Link>
+		// 			<a href="/Restaurant">Client</a>
+		// 		</div>
+		// 	</div>
+		// </div>
 
 		)
 	}
@@ -93,7 +111,6 @@ class App extends React.Component {
 ReactDOM.render(
 <Router history={browserHistory}>
     <Route path="/" component={App} />
-    <Route path="/Supplier" component={Supplier}/>
-    <Route path="/Restaurant" component={Supplier} />
-		{/* <Miss component={NotFound}/> */}
-</Router>, document.getElementById('app'));
+        <Route path="/Supplier" component={Login} />
+        <Route path="/Restaurant" component={Supplier} />
+</Router>, document.getElementById('app'))

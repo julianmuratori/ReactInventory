@@ -78,7 +78,7 @@ header {
   div {
     width: 20%;
     // text-align: center;
-    border: 1px solid black;
+    // border: 1px solid black;
     display: flex;
 
     .notes {
@@ -98,10 +98,23 @@ header {
   }
 
   .quantity-container {
-    width: 50%;
+    width: 100%;
+
+    div {
+      width: 50%;
+
+      button {
+        width: 50%;
+      }
+    }
   }
 }
 
+.deleteInventoryItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
   textarea {
     height: 100px;

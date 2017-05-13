@@ -31,15 +31,19 @@ class Inventory extends React.Component {
               </div>
               <div className="quantity">
                 <div className="quantity-container">
-                  <p>{this.props.details.quantity}{this.props.details.priceStyle}</p>
-                  <button onClick={ (e) => this.addOne(e)}>+</button>
-                  <button onClick={ (e) => this.removeOne(e)}>-</button>
+                  <div>
+                    <p>{this.props.details.quantity}{this.props.details.priceStyle}</p>
+                  </div>
+                  <div>
+                    <button onClick={ (e) => this.addOne(e)}>+</button>
+                    <button onClick={ (e) => this.removeOne(e)}>-</button>
+                  </div>
                 </div>
               </div>
               <div>
                 <textarea className="notes" type="text" name="notes" value={this.props.details.desc}/>
               </div>
-              <div>
+              <div className="deleteInventoryItem">
                 <a href="" className="closeButton" onClick={ (e) => this.removeItem(e)}><i className="fa fa-times"></i></a>
               </div>
             </div>

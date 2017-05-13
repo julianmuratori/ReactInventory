@@ -209,7 +209,6 @@ header {
   display: flex; }
   .List-Entries div {
     width: 20%;
-    border: 1px solid black;
     display: flex; }
     .List-Entries div .notes {
       width: 100%;
@@ -221,7 +220,16 @@ header {
     display: flex;
     justify-content: center; }
   .List-Entries .quantity-container {
-    width: 50%; }
+    width: 100%; }
+    .List-Entries .quantity-container div {
+      width: 50%; }
+      .List-Entries .quantity-container div button {
+        width: 50%; }
+
+.deleteInventoryItem {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 textarea {
   height: 100px;
