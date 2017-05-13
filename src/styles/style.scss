@@ -2,6 +2,34 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 .clearfix:after { visibility: hidden; display: block; font-size: 0; content: ""; clear: both; height: 0;}
 
+$colorPrimary: #2c314f;
+$formBackground: #efeee9;
+
+$fontPrimary: 'Montserrat', sans-serif;
+$fontSecondary: 'Lato', sans-serif;
+
+textarea, input, select {
+  box-shadow: none;
+  border: none;
+}
+
+select {
+  appearance: none;
+}
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background: $colorPrimary;
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-family: $fontPrimary;
+}
 .mainSplash {
   display: flex;
   justify-content: center;
@@ -22,4 +50,76 @@ button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-bloc
     border: 1px solid black;
     padding: 10px 25px;
   }
+}
+
+.liststyle {
+  list-style: none;
+  width: 100%;
+  padding-left: 0;
+}
+
+.List-Headings {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+
+  .List-Headings-Container {
+    border: 1px solid black;
+    width: 20%;
+    text-align: center;
+  }
+}
+
+// Vendor Side Styling
+
+.List-Entries {
+  display: flex;
+
+  div {
+    width: 20%;
+    // text-align: center;
+    border: 1px solid black;
+    display: flex;
+
+    .notes {
+      width: 100%;
+      height: 100%;
+    }
+
+    input {
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+  .quantity {
+    display: flex;
+    justify-content: center;
+  }
+
+  .quantity-container {
+    width: 50%;
+  }
+}
+
+
+  textarea {
+    height: 100px;
+    resize: none;
+  }
+
+.new-item {
+  width: 30%;
+  margin-left: 10px;
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+}
+
+.new-item-inputs {
+  margin: 3px 0;
+  background: $formBackground;
 }

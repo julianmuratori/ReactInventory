@@ -155,6 +155,25 @@ summary {
   clear: both;
   height: 0; }
 
+textarea, input, select {
+  box-shadow: none;
+  border: none; }
+
+select {
+  appearance: none; }
+
+.wrapper {
+  width: 80%;
+  margin: 0 auto; }
+
+header {
+  background: #2c314f;
+  padding: 25px 0;
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+  font-family: "Montserrat", sans-serif; }
+
 .mainSplash {
   display: flex;
   justify-content: center;
@@ -171,3 +190,50 @@ summary {
   .splashButton a {
     border: 1px solid black;
     padding: 10px 25px; }
+
+.liststyle {
+  list-style: none;
+  width: 100%;
+  padding-left: 0; }
+
+.List-Headings {
+  display: flex;
+  justify-content: space-around;
+  position: relative; }
+  .List-Headings .List-Headings-Container {
+    border: 1px solid black;
+    width: 20%;
+    text-align: center; }
+
+.List-Entries {
+  display: flex; }
+  .List-Entries div {
+    width: 20%;
+    border: 1px solid black;
+    display: flex; }
+    .List-Entries div .notes {
+      width: 100%;
+      height: 100%; }
+    .List-Entries div input {
+      width: 50%;
+      margin: 0 auto; }
+  .List-Entries .quantity {
+    display: flex;
+    justify-content: center; }
+  .List-Entries .quantity-container {
+    width: 50%; }
+
+textarea {
+  height: 100px;
+  resize: none; }
+
+.new-item {
+  width: 30%;
+  margin-left: 10px; }
+  .new-item form {
+    display: flex;
+    flex-direction: column; }
+
+.new-item-inputs {
+  margin: 3px 0;
+  background: #efeee9; }
