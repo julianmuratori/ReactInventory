@@ -75,7 +75,10 @@ class App extends React.Component {
 
 		addOne(item) {
 			const newItems = this.state.inventoryItems;
+			// newItems[item] = Number.parseInt(newItems[item])
+			newItems[item].quantity = parseInt(newItems[item].quantity);
 			newItems[item].quantity = (newItems[item].quantity + 1);
+			console.log(newItems[item])
 			this.setState({
 				inventoryItems: newItems
 			})
